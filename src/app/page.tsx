@@ -187,7 +187,10 @@ export default function Home() {
         <div className="flex flex-wrap justify-center gap-10 lg:gap-36">
           {contacts.map((contact, i) => {
             return (
-              <div className="flex flex-col gap-3 items-center text-white">
+              <div
+                key={i}
+                className="flex flex-col gap-3 items-center text-white"
+              >
                 <div className="bg-primary-500 text-secondary-900 w-[70px] h-[70px] rounded-full flex justify-center items-center mb-8">
                   {contact.icon}
                 </div>
