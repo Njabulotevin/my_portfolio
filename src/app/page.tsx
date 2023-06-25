@@ -49,7 +49,7 @@ export default function Home() {
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
           }}
-          className="bg-[url('/developer.png')] flex flex-wrap flex-col w-full min-h-[80vh] px-10 pt-20 py-10"
+          className="bg-[url('/developer.png')] flex flex-wrap flex-col w-full min-h-[80vh] px-10 lg:pt-20 py-6"
         >
           <div className="flex  flex-wrap  gap-20 lg:gap-24 justify-center items-center text-gray-100">
             <div className="flex flex-col gap-4">
@@ -59,9 +59,9 @@ export default function Home() {
                   I&apos;m <span className="gradientText">Tevin</span>
                 </span>
               </h1>
-              <h1 className="text-5xl text-center lg:text-start lg:text-8xl flex lg:hidden flex-col  font-bold">
+              <h1 className="text-5xl text-center lg:text-start lg:text-8xl flex lg:hidden flex-col  font-bold mb-5">
                 <span className="">Frontend.</span>{" "}
-                <span className="gradientText">Develper.</span>{" "}
+                <span className="gradientText">Developer.</span>{" "}
                 <span>Designer</span>
               </h1>
               <div className="w-full lg:max-w-[400px] text-center lg:text-start flex flex-col gap-4">
@@ -78,8 +78,8 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="w-full lg:w-[600px] lg:h-[600px]">
-              <img src="/me_1.png" alt="" />
+            <div className="w-[250px] h-[250px] flex items-center justify-center  lg:w-[600px] lg:h-[600px] ">
+              <img src="/me_3.png" alt="" />
             </div>
           </div>
           <div>
