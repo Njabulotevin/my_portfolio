@@ -51,15 +51,20 @@ export default function Home() {
           }}
           className="bg-[url('/developer.png')] flex flex-wrap flex-col w-full min-h-[80vh] px-10 pt-20 py-10"
         >
-          <div className="flex flex-wrap gap-24 justify-center items-center text-gray-100">
+          <div className="flex  flex-wrap  gap-20 lg:gap-24 justify-center items-center text-gray-100">
             <div className="flex flex-col gap-4">
-              <h1 className="text-4xl lg:text-8xl flex flex-col  font-semibold">
+              <h1 className="text-6xl text-center lg:text-start lg:text-8xl hidden lg:flex flex-col  font-semibold">
                 <span>Hey There,</span>{" "}
                 <span>
-                  I&apos;m <span className="text-secondary-900">Tevin</span>
+                  I&apos;m <span className="gradientText">Tevin</span>
                 </span>
               </h1>
-              <div className="max-w-[400px] flex flex-col gap-4">
+              <h1 className="text-5xl text-center lg:text-start lg:text-8xl flex lg:hidden flex-col  font-bold">
+                <span className="">Frontend.</span>{" "}
+                <span className="gradientText">Develper.</span>{" "}
+                <span>Designer</span>
+              </h1>
+              <div className="w-full lg:max-w-[400px] text-center lg:text-start flex flex-col gap-4">
                 <p>
                   A frontend developer with a passion for creating visually
                   appealing and user-friendly web experiences.
@@ -70,7 +75,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="w-[300px] lg:w-[600px] lg:h-[600px]">
+            <div className="w-full lg:w-[600px] lg:h-[600px]">
               <img src="/me_1.png" alt="" />
             </div>
           </div>
@@ -81,7 +86,7 @@ export default function Home() {
       </main>
       <section className="flex gap-5 flex-wrap justify-center lg:gap-3 bg-white min-h-[60vh] px-10 lg:px-20 py-36">
         <div className="flex flex-col gap-3 ">
-          <h2 className="text-6xl lg:text-8xl font-semibold text-secondary-900">
+          <h2 className="text-6xl lg:text-8xl font-semibold gradientText">
             5+
           </h2>
           <h3 className="text-lg lg:text-3xl font-semibold text-primary-900 max-w-[220px]">
@@ -89,14 +94,12 @@ export default function Home() {
           </h3>
         </div>
         <div className="flex flex-col gap-4 lg:max-w-[48vw] my-10 lg:m-0">
-          <h2 className="text-4xl font-semibold text-secondary-900">
-            About me
-          </h2>
+          <h2 className="text-4xl font-semibold gradientText">About me</h2>
           <p className="font-semibold text-primary-900">
             I&apos;m a frontend developer with a passion for creating visually
             appealing and user-friendly web experiences. With expertise in
             frontend technologies such as{" "}
-            <span className="text-secondary-900">
+            <span className="gradientText">
               Next.js, Sass, Tailwind CSS, Javascript and TypeScript
             </span>
             , I specialize in designing and building robust and responsive
@@ -159,7 +162,7 @@ export default function Home() {
       </section>
       <section className="lg:px-20 p-10 lg:py-36 flex flex-wrap justify-center gap-4 min-h-[60vh]">
         <div className="flex flex-col gap-4">
-          <h2 className="text-4xl font-semibold text-secondary-900">
+          <h2 className="text-4xl font-semibold gradientText">
             My Recent Work
           </h2>
           <h3 className="text-3xl font-semibold text-white">Uzoori App</h3>
