@@ -66,6 +66,9 @@ export default function Home() {
               </h1>
               <div className="w-full lg:max-w-[400px] text-center lg:text-start flex flex-col gap-4">
                 <p>
+                  <span className="lg:hidden flex text-center justify-center font-medium">
+                    Hey There, i&apos;m Tevin
+                  </span>
                   A frontend developer with a passion for creating visually
                   appealing and user-friendly web experiences.
                 </p>
