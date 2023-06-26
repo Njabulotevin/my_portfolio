@@ -1,5 +1,8 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
+import Link from "next/link";
+import { AlignRight } from "lucide-react";
+import NavBar from "./NavBar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -18,7 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }

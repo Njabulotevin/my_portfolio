@@ -28,21 +28,7 @@ export default function Home() {
   ];
   return (
     <div className="overflow-x-hidden">
-      <main className="lg:p-20 lg:pt-[50px]">
-        <section className="flex justify-between max-w-[70vw] mx-auto">
-          <img
-            src="/Tev..png"
-            alt="logo"
-            className="w-[40px] h-[100px] lg:h-[54px] lg:w-[100px] object-contain"
-          />
-          <div className="hidden lg:flex">
-            <ul className="flex gap-10 font-medium text-lg text-gray-100">
-              <li className="cursor-pointer">About Me</li>
-              <li className="cursor-pointer">Project</li>
-              <li className="cursor-pointer">Contact</li>
-            </ul>
-          </div>
-        </section>
+      <main className="lg:p-20 pt-32 lg:pt-[50px]">
         <section
           style={{
             backgroundSize: "100%",
@@ -184,8 +170,16 @@ export default function Home() {
             </Link>{" "}
             powered by Nextjs.
           </p>
+          <div className="my-5">
+            <Link
+              className="primary-gradient text-primary-900 font-medium p-3 rounded-md"
+              href="/projects"
+            >
+              View All projects
+            </Link>
+          </div>
         </div>
-        <div className="">
+        <div className="w-[300px] h-[180px]">
           <img src="/uzoori.png" />
         </div>
       </section>

@@ -37,3 +37,25 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.primary-gradient {
+  background-image: linear-gradient(
+    to right top,
+    #27ae60,
+    #45be57,
+    #64ce4a,
+    #85dd36,
+    #a8eb12
+  );
+}
+
+.primary-gradient :hover {
+  background-image: linear-gradient(
+    to right top,
+    #12b10a,
+    #0fb12d,
+    #13b042,
+    #1caf52,
+    #27ae60
+  );
+}
