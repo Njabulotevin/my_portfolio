@@ -1,6 +1,9 @@
+"use client";
 import { Github, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, Variants } from "framer-motion";
+import useHomeVariants from "./hooks/useHomeVariants";
 
 export default function Home() {
   const skills = [
@@ -26,9 +29,22 @@ export default function Home() {
     { label: "Github", icon: <Github />, value: "@njabulotevin" },
     { label: "Phone Number", icon: <Phone />, value: "(+72) 64 891 7936" },
   ];
+
+  const {
+    imageVariants,
+    titleVariants,
+    aboutUsVariants,
+    aboutUsHeaderVariants,
+  } = useHomeVariants();
+
   return (
     <div className="overflow-x-hidden">
-      <main className="lg:p-20 pt-32 lg:pt-[50px]">
+      <motion.main
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ amount: 0.8 }}
+        className="lg:p-20 pt-32 lg:pt-[50px]"
+      >
         <section
           style={{
             backgroundSize: "100%",
@@ -37,8 +53,11 @@ export default function Home() {
           }}
           className="bg-[url('/developer.png')] flex flex-wrap flex-col w-full min-h-[80vh] px-10 lg:pt-20 py-6"
         >
-          <div className="flex  flex-wrap  gap-20 lg:gap-24 justify-center items-center text-gray-100">
-            <div className="flex flex-col gap-4">
+          <div className="flex  flex-wrap  gap-20 lg:gap-24 justify-center items-center text-gray-100 ">
+            <motion.div
+              variants={titleVariants}
+              className="flex flex-col gap-4"
+            >
               <h1 className="text-6xl text-center lg:text-start lg:text-8xl hidden lg:flex flex-col  font-semibold">
                 <span>Hey There,</span>{" "}
                 <span>
@@ -63,26 +82,37 @@ export default function Home() {
                   Tailwind CSS, and TypeScript,
                 </p>
               </div>
-            </div>
+            </motion.div>
             <div className="w-[250px] h-[250px] flex items-center justify-center  lg:w-[600px] lg:h-[600px] ">
-              <img src="/me_3.png" alt="" />
+              <motion.img variants={imageVariants} src="/me_3.png" alt="" />
             </div>
           </div>
           <div>
             <img className="mx-auto" src="/tech.png" />
           </div>
         </section>
-      </main>
-      <section className="flex gap-5 flex-wrap justify-center lg:gap-3 bg-white min-h-[60vh] px-10 lg:px-20 py-36">
-        <div className="flex flex-col gap-3 ">
+      </motion.main>
+      <motion.section
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.8 }}
+        className="flex gap-5 flex-wrap justify-center lg:gap-3 bg-white min-h-[60vh] px-10 lg:px-20 py-36"
+      >
+        <motion.div
+          variants={aboutUsHeaderVariants}
+          className="flex flex-col gap-3 "
+        >
           <h2 className="text-6xl lg:text-8xl font-semibold gradientText">
             5+
           </h2>
           <h3 className="text-lg lg:text-3xl font-semibold text-primary-900 max-w-[220px]">
             /Years of working Experience
           </h3>
-        </div>
-        <div className="flex flex-col gap-4 lg:max-w-[48vw] my-10 lg:m-0">
+        </motion.div>
+        <motion.div
+          variants={aboutUsVariants}
+          className="flex flex-col gap-4 lg:max-w-[48vw] my-10 lg:m-0"
+        >
           <h2 className="text-4xl font-semibold gradientText">About me</h2>
           <p className="font-semibold text-primary-900">
             I&apos;m a frontend developer with a passion for creating visually
@@ -104,8 +134,8 @@ export default function Home() {
             work that aligns with both user needs and business goals. Let&apos;s
             collaborate to bring your frontend projects to the next level!
           </p>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
       <section
         style={{
           backgroundSize: "100%",
