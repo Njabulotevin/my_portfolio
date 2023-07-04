@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body style={{ overflowX: "hidden" }} className={poppins.className}>
         <NavBar />
         {children}
       </body>

@@ -7,15 +7,11 @@
   --background: #171717;
 }
 
-html,
-body,
-#root {
-  height: 100%;
+body {
   width: 100%;
   margin: 0;
   padding: 0;
-  /* Prevents overflow on the x-axis */
-  overflow-x: hidden;
+
   color: rgb(var(--foreground-rgb));
   background: var(--background);
 }

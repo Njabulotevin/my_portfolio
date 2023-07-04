@@ -38,12 +38,12 @@ export default function Home() {
   } = useHomeVariants();
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden w-full">
       <motion.main
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ amount: 0.8 }}
-        className="lg:p-20 pt-32 lg:pt-[50px]"
+        // viewport={{ amount: 0.8 }}
+        className="lg:p-20 pt-32 lg:pt-[50px] w-full"
       >
         <section
           style={{
@@ -95,8 +95,8 @@ export default function Home() {
       <motion.section
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ once: true, amount: 0.8 }}
-        className="flex gap-5 flex-wrap justify-center lg:gap-3 bg-white min-h-[60vh] px-10 lg:px-20 py-36"
+        // viewport={{ once: true, amount: 0.8 }}
+        className="flex gap-5 w-full flex-wrap justify-center lg:gap-3 bg-white min-h-[60vh] px-10 lg:px-20 py-36"
       >
         <motion.div
           variants={aboutUsHeaderVariants}
